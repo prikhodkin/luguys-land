@@ -1,0 +1,23 @@
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff;
+  transition: all 0.3s;
+  &:hover {
+    fill: $hover-color;
+  }
+}
+
+.social {
+  @include list-reset;
+  display: flex;
+}
+
+.social__item {
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}

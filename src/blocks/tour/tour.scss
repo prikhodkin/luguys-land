@@ -1,0 +1,57 @@
+.tour {
+  @include list-reset;
+  margin: 0;
+}
+
+.tour__title {
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.tour__desc {
+  margin: 15px 0 0;
+  font-weight: 300;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.tour__item {
+  padding: 20px 15px;
+  border-bottom: 1px solid #000;
+  color: #000000;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tour {
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .tour__item {
+    flex-grow: 1;
+    color: #ffffff;
+    border-bottom: none;
+    padding: 30px 20px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tour {
+    left: calc(50% - 585px);
+    width: 1170px;
+  }
+}

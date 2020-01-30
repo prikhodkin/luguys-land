@@ -1,0 +1,33 @@
+.slider__item {
+  margin: 5px;
+  img {
+    width: 100%;
+  }
+}
+
+.slider__list {
+  @include list-reset;
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    padding-bottom: 150px;
+    .slick-arrow {
+      position: absolute;
+      z-index: 10;
+      top: calc(50% - 27.5px);
+      background-image: url(../../img/slider-arrow__white.svg);
+      &:hover {
+        background-image: url(../../img/slider__arrow--hover.svg);
+      }
+    }
+    
+    .slick-prev {
+      left: 10%;
+    }
+    
+    .slick-next {
+      right: 10%;
+    }
+  }
+}

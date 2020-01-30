@@ -1,0 +1,137 @@
+.select-tour__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.select-tour {
+  padding: 20px 15px;
+}
+
+.select-tour__list {
+  @include list-reset;
+  margin: 0;
+}
+
+.select-tour__item {
+  display: flex;
+  flex-direction: column-reverse;
+  counter-increment: section;
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.select-tour__count {
+  font-size: 16px;
+  color: $hover-color;
+  margin: 0;
+}
+
+.select-tour__name {
+  position: relative;
+  font-family: $marmelad;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0c435c;
+  margin: 5px 0 25px 0;
+
+  &::before {
+    font-family: $sans;
+    content: "0" counter(section);
+    position: absolute;
+    top: -60px;
+    right: 0;
+    font-size: 100px;
+    line-height: 136px;
+    color: rgba(19, 95, 189, 0.06);
+  }
+}
+
+.select-tour__desc {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.select-tour__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4c828f;
+  border-bottom: 1px solid #4c828f;
+  transition: all 0.3s;
+  padding-bottom: 10px;
+  &:hover {
+    color: $hover-color;
+    border-color: $hover-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .select-tour__item {
+    flex-direction: row;
+    align-items: flex-start;
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      .select-tour__content {
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+  
+  .select-tour__content {
+    margin-right: 20px;
+  }
+  
+  .select-tour__img {
+    max-width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .select-tour__img {
+    max-width: 585px;
+  }
+  
+  .select-tour {
+    @include page-wrapper;
+    padding-bottom: 80px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 303px;
+      height: 215px;
+      background-image: url("../../img/bird.png");
+    }
+  }
+  
+  .select-tour__content {
+    margin-right: 85px;
+  }
+  
+  .select-tour__item {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+    &:nth-child(2n) {
+      .select-tour__content {
+        margin-right: 0;
+        margin-left: 85px;
+      }
+    }
+  }
+  
+  .select-tour__name {
+    &::before {
+      right: auto;
+      top: -80px;
+      left: -50px;
+    }
+  }
+}

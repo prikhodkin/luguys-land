@@ -38,7 +38,8 @@ const requireDir = require("require-dir"),
         },
         scriptsLib: {
           src: ['node_modules/jquery/dist/jquery.min.js',
-          'node_modules/slick-carousel/slick/slick.min.js'],
+          'node_modules/slick-carousel/slick/slick.min.js',
+          'node_modules/fancybox/dist/js/jquery.fancybox.pack.js'],
           dest: "./docs/js/"
         },
         sprite: {

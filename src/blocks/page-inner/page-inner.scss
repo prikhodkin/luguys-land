@@ -4,6 +4,9 @@
   background-size: contain;
   .menu__item {
     color: #000000;
+    &:hover {
+      color: $hover-color;
+    }
   }
   .menu__hamburger {
     background-color: #000000;

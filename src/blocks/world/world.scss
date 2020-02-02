@@ -1,0 +1,51 @@
+.world__img {
+  display: none;
+}
+
+.world {
+  padding: 20px 15px;
+  .title {
+    margin-bottom: 5px;
+  }
+}
+
+.world__sub-title {
+  font-size: 16px;
+  line-height: 22px;
+  color: #a18965;
+}
+
+.world__inner {
+  p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .world {
+    @include page-wrapper;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-image: url(../../img/bear-white.png);
+    margin-bottom: -150px;
+    .title {
+      margin-top: 0;
+    }
+  }
+  
+  .world__img {
+    display: block;
+    margin-right: 45px;
+  }
+  
+  .world__inner {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 45px;
+  }
+}

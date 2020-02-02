@@ -148,6 +148,7 @@
 @media (min-width: $desktop-width) {
   .services {
     @include page-wrapper;
+    padding-bottom: 0;
     .title {
       margin-bottom: 35px;
     }
@@ -162,7 +163,7 @@
   }
   
   .services__list {
-    margin: 90px 0;
+    margin: 90px 0 0 0;
   }
   
   .services__desc {

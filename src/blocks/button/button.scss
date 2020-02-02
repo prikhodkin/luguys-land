@@ -11,4 +11,10 @@
 .button__opacity {
   border: 1px solid #ffffff;
   color: #ffffff;
+  background: transparent;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }

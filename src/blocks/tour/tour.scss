@@ -4,6 +4,7 @@
 }
 
 .tour__title {
+  font-weight: 400;
   font-size: 18px;
   transition: all 0.3s;
 }
@@ -19,6 +20,7 @@
   padding: 20px 15px;
   border-bottom: 1px solid #000;
   color: #000000;
+  transition: all 0.3s;
   &:hover {
     color: $hover-color;
   }
@@ -40,6 +42,7 @@
     color: #ffffff;
     border-bottom: none;
     padding: 30px 20px;
+    transition: all 0.3s;
     &:first-child {
       padding-left: 0;
     }
@@ -53,5 +56,29 @@
   .tour {
     left: calc(50% - 585px);
     width: 1170px;
+  }
+  
+  .tour__item {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: transparent;
+      transition: all 0.3s;
+    }
+    &:hover {
+      color: #ffffff;
+      &::before {
+        background: #ffffff;
+      }
+      .tour__title {
+        font-weight: 600;
+      }
+    }
   }
 }

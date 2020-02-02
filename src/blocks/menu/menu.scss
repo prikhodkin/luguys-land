@@ -19,7 +19,7 @@
   display: block;
   position: relative;
   height: 2px;
-  background-color: $burger-color;
+  background-color: #000000;
   transition: all 0.3s;
   &::before, &::after {
     content: "";
@@ -28,7 +28,7 @@
     left: 0;
     width: 100%;
     height: inherit;
-    background-color: $burger-color;
+    background-color: #000000;
     transition: all 0.3s;
   }
 
@@ -41,13 +41,16 @@
 
   &--active {
     background-color: transparent;
+   
     &::before {
       top: 0;
       transform: rotate(45deg);
+      background-color: #ffffff;
     }
     &::after {
       bottom: 0;
       transform: rotate(-45deg);
+      background-color: #ffffff;
     }
   }
 }

@@ -1,0 +1,35 @@
+.page-inner {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  .menu__item {
+    color: #000000;
+  }
+  .menu__hamburger {
+    background-color: #000000;
+    &::before, &::after {
+      background-color: #000000;
+    }
+  }
+  
+  .menu__hamburger--active {
+    &::before, &::after {
+      background-color: $burger-color;
+    }
+  }
+  
+  .menu--open {
+    .menu__item {
+      color: #ffffff;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-inner {
+    &--tours {
+      .menu__item {
+        color: #ffffff;
+      }
+    }
+  }
+}

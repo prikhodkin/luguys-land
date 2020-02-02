@@ -12,11 +12,18 @@
     font-weight: 400;
     margin: 0;
   }
+  &--inner {
+    text-transform: unset;
+    text-align: left;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .title {
     margin: 90px 0;
     font-size: 36px;
+    &--inner {
+      font-size: 50px;
+    }
   }
 }

@@ -1,0 +1,259 @@
+.contacts {
+  padding: 20px 15px;
+  margin-top: 88px;
+  &--body {
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+.contacts__desc {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.contacts__sub-title {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 40px;
+}
+
+.contacts__list {
+  @include list-reset;
+}
+
+.contacts__head {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  color: #676767;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contacts__txt {
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts__link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 21px;
+  color: #006cb6;
+  margin: 40px 0;
+}
+
+.contacts__download {
+  fill: #006cb6;
+  width: 21px;
+  height: 21px;
+  margin-right: 25px;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+
+
+.contacts__input {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4a4a4a;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #4a4a4a;
+  margin-bottom: 25px;
+}
+
+.contacts__textarea {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  border: none;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4a4a4a;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #4a4a4a;
+  margin-bottom: 25px;
+}
+
+.contacts__icon {
+  fill: transparent;
+  stroke: #a18965;
+  width: 51px;
+  height: 51px;
+  transition: all 0.3s;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.contacts__btn {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  color: #a18965;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 40px;
+  &:hover {
+    color: #4c828f;
+    .contacts__icon {
+      stroke: #4c828f;
+    }
+  }
+}
+
+.contacts__map {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -20px;
+  iframe {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    .title {
+      margin-top: 0;
+    }
+  }
+  
+  .contacts__map {
+    width: 50%;
+    margin: 0;
+    margin-right: 20px;
+    margin-left: -15px;
+    iframe {
+      min-height: 100vh;
+    }
+  }
+  
+  .contacts__content {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__content {
+    width: 770px;
+    margin-left: 30px;
+  }
+  
+  .contacts {
+    padding-right: calc(50% - 585px);
+  }
+  
+  .contacts__map {
+    flex-grow: 1;
+    align-self: stretch;
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -5px;
+    margin-right: 0;
+    transition: all 0.3s;
+    &--active {
+      position: fixed;
+      left: 0;
+      width: 100vw;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      transition: all 0.3s;
+    }
+    &:hover {
+      &::before {
+        background: transparent;
+        z-index: -1;
+      }
+    }
+    iframe {
+      height: 100%;
+    }
+  }
+  
+  .contacts__top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+  }
+  
+  .contacts__desc {
+    max-width: 385px;
+  }
+  
+  .contacts__inner {
+    display: flex;
+  }
+  
+  .contacts__left {
+    width: 227px;
+    margin-right: 220px;
+  }
+  
+  .contacts__form {
+    flex-grow: 1;
+  }
+  
+  .contacts__textarea {
+    min-height: 85px;
+  }
+  
+  .contacts__show {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 39px);
+    border-radius: 50%;
+    right: -39px;
+    width: 78px;
+    height: 78px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    transition: all 0.3s;
+    background-image: url(../../img/left-arrow.svg);
+    &--active {
+      transform: rotate(180deg);
+      background-position-x: 45px;
+    }
+  }
+}

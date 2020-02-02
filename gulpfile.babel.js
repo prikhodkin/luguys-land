@@ -41,7 +41,8 @@ const requireDir = require("require-dir"),
           'node_modules/slick-carousel/slick/slick.min.js',
           'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
           'node_modules/jquery-mousewheel/jquery.mousewheel.js',
-          'node_modules/jq-accordion/dist/js/jquery.accordion.js'],
+          'node_modules/jq-accordion/dist/js/jquery.accordion.js',
+          'node_modules/flextabs/flextabs.js'],
           dest: "./docs/js/"
         },
         sprite: {

@@ -12,3 +12,9 @@ $('.page-tour__slider-list').slick({
     }
   ]
 });
+
+const targets = document.querySelectorAll('.flextabs');
+for (let i = 0; i < targets.length; i ++) {
+  let tabs = flextabs(targets[i]);
+  tabs.init();
+}
